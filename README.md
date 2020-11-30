@@ -1,4 +1,4 @@
-# imooc
+# dataVisualization
 
 ## Project setup
 ```

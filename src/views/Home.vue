@@ -24,9 +24,10 @@ export default {
 </script>
 <style lang="scss" scoped>
   .home{
-    background:#eee;
-    width:100%;
-    height:100%;
-    padding:20px;
+    background: #eee;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
   }
 </style>
