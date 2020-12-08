@@ -23,7 +23,7 @@
       <el-col :span="6">
         <el-card shadow="hover" :body-style="{ padding: '15px' }">
           <template v-slot:header>
-            <div class="title-wrapper">热门搜索</div>
+            <div class="title-wrapper">热门搜索{{word}}</div>
           </template>
           <template>
             <div class="wordCloud">
@@ -33,7 +33,6 @@
         </el-card>
       </el-col>
     </el-row>
-
   </div>
 </template>
 <script>
@@ -83,6 +82,12 @@ export default {
     this.initMap()
     this.initLiquidFill()
     this.initWordCloud()
+  },
+  inject: ['getWordCloud'], // 接收
+  computed: {
+    word() {
+      return this.getWordCloud()
+    }
   },
   methods: {
     initMap() {
@@ -359,7 +364,6 @@ export default {
       }
     },
     initWordCloud() {
-
     }
   }
 }

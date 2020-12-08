@@ -20,5 +20,6 @@ yarn build
 yarn lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### 文档 
+[v-charts](https://v-charts.js.org/). [echarts](https://echarts.apache.org/examples/zh/index.html).
+[Vue-ECharts](https://github.com/ecomfe/vue-echarts/blob/master/README.zh_CN.md).

@@ -12,6 +12,7 @@ import TopView from '../components/TopView'
 import SalesView from '../components/SalesView'
 import MapView from '../components/MapView'
 import BottomView from '../components/BottomView'
+import { wordCloud } from '../api'
 export default {
   name: 'Home',
   components: {
@@ -19,6 +20,25 @@ export default {
     SalesView,
     MapView,
     BottomView
+  },
+  data() {
+    return {
+      wordCloud: null
+    }
+  },
+  provide() {
+    return {
+      getWordCloud: this.getWordCloudFun // 指向
+    }
+  },
+  async mounted() {
+    const data = await wordCloud()
+    this.wordCloud = data
+  },
+  methods: {
+    getWordCloudFun() {
+      return this.wordCloud
+    }
   }
 }
 </script>
